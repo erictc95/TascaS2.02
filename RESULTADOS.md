@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 33 correctas de 41 queries
+✅ 35 correctas de 41 queries
 
 ## ✅ Query 1: Correcto
 
@@ -13,14 +13,14 @@
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -30,31 +30,21 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 5: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nom del producte | euros | dòlars
-+nombre | euros | dólars
- Disco duro SATA3 1TB | 86.99 | 95.69
- Memoria RAM DDR4 8GB | 120.00 | 132.00
- Disco SSD 1 TB | 150.99 | 166.09
-```
+## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -68,35 +58,35 @@
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.28 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -117,7 +107,7 @@
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -134,7 +124,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -144,28 +134,28 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 21: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
@@ -197,24 +187,14 @@
 -Disco duro SATA3 1TB | 86.99 | Seagate
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
-## ❌ Query 23: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--codigo | nombre | codigo fabricante | nombre fabricante
-+codigo | nombre | codigo del fabricante | nombre del fabricante
- 1.00 | Disco duro SATA3 1TB | 5.00 | Seagate
- 2.00 | Memoria RAM DDR4 8GB | 6.00 | Crucial
- 3.00 | Disco SSD 1 TB | 4.00 | Samsung
-```
+## ✅ Query 23: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
@@ -229,42 +209,42 @@
  Impresora HP Deskjet 3720 | 59.99 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 25: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 27: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 28: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 29: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 🚨 **Problemas detectados:**
@@ -274,21 +254,21 @@
 
 ## ✅ Query 30: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 31: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 32: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
@@ -297,37 +277,29 @@
 ```diff
 --- 
 +++ 
-@@ -1,8 +1,12 @@
+@@ -1,4 +1,4 @@
 -codigo | nombre
 +codigo | fabricante
-+1.00 | Asus
  1.00 | Asus
  2.00 | Lenovo
-+2.00 | Lenovo
-+3.00 | Hewlett-Packard
  3.00 | Hewlett-Packard
- 4.00 | Samsung
- 5.00 | Seagate
- 6.00 | Crucial
-+6.00 | Crucial
- 7.00 | Gigabyte
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 34: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 35: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -369,7 +341,7 @@
 
 ## ✅ Query 39: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
@@ -378,20 +350,16 @@
 ```diff
 --- 
 +++ 
-@@ -1,3 +1,3 @@
+@@ -1,3 +1,2 @@
 -codigo | nombre | precio | codigo_fabricante
 -5.00 | GeForce GTX 1080 Xtreme | 755.00 | 6.00
 -8.00 | Portátil Yoga 520 | 559.00 | 2.00
-+codigo | nombre | precio | codigo_fabricante | codigo | nombre
-+5.00 | GeForce GTX 1080 Xtreme | 755.00 | 6.00 | 6.00 | Crucial
-+8.00 | Portátil Yoga 520 | 559.00 | 2.00 | 2.00 | Lenovo
++nombre
++Monitor 27 LED Full HD
 ```
 
 ⏱ Tiempo: 0.41 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
@@ -406,7 +374,7 @@
 +Monitor 27 LED Full HD
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
