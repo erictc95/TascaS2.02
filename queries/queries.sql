@@ -233,7 +233,7 @@ ON p.codigo_fabricante = f.codigo
 WHERE f.nombre = "Lenovo");
 
 -- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
-SELECT p.codigo, p.nombre, p.precio, p.codigo_fabricante
+SELECT codigo, nombre, precio, codigo_fabricante
 FROM producto
 WHERE codigo_fabricante = (
     SELECT codigo
