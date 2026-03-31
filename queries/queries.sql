@@ -222,6 +222,17 @@ ON p.codigo_fabricante = f.codigo
 WHERE f.nombre = "Hewlett-Packard");
 
 -- 40. Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
+SELECT p.nombre
+FROM producto AS p
+JOIN fabricante AS f 
+ON p.codigo_fabricante = f.codigo
+WHERE p.precio >= (SELECT MAX(p.precio) 
+FROM producto AS p 
+JOIN fabricante AS f 
+ON p.codigo_fabricante = f.codigo 
+WHERE f.nombre = "Lenovo");
+
+-- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
 SELECT nombre
 FROM producto
 WHERE codigo_fabricante = (
@@ -236,14 +247,3 @@ AND precio > (
         FROM fabricante
         WHERE nombre = 'Asus')
 );
-
--- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
-SELECT p.nombre
-FROM producto AS p
-JOIN fabricante AS f 
-ON p.codigo_fabricante = f.codigo
-WHERE p.precio > (SELECT AVG(p.precio) 
-FROM producto AS p 
-JOIN fabricante AS f 
-ON p.codigo_fabricante = f.codigo 
-WHERE f.nombre = "Asus") AND f.nombre = "Asus";
