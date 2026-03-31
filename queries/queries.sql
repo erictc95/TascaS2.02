@@ -17,9 +17,9 @@ precio * 1 AS precio_usd
 FROM producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
-SELECT nombre, 
+SELECT nombre AS `nom del producte`, 
 precio AS euros, 
-ROUND(precio * 1.1,2) AS dólars
+ROUND(precio * 1.1,2) AS `dòlars`
 FROM producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
@@ -104,16 +104,16 @@ SELECT p.nombre, p.precio, f.nombre AS `nombre del fabricante`
 FROM producto AS p
 JOIN fabricante AS f 
 ON p.codigo_fabricante = f.codigo
-ORDER BY p.nombre;
+ORDER BY nombre;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
-SELECT p.codigo, p.nombre, f.codigo AS `codigo del fabricante`, f.nombre AS `nombre del fabricante` 
+SELECT p.codigo, p.nombre, f.codigo AS `codigo fabricante`, f.nombre AS `nombre fabricante` 
 FROM producto AS p
 JOIN fabricante AS f 
 ON p.codigo_fabricante = f.codigo;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
-SELECT p.nombre, p.precio, f.nombre AS fabricante 
+SELECT DISTINCT p.nombre, p.precio, f.nombre AS fabricante 
 FROM producto AS p
 JOIN fabricante AS f 
 ON p.codigo_fabricante = f.codigo
@@ -177,7 +177,7 @@ WHERE p.precio >= 180
 ORDER BY p.precio DESC, p.nombre ASC;
 
 -- 33. Retorna un llistat amb el codi i el nom de fabricant (fabricante), solament d'aquells fabricants que tenen productes associats en la base de dades.
-SELECT f.codigo, (f.nombre) AS fabricante
+SELECT DISTINCT f.codigo, f.nombre AS fabricante
 FROM fabricante AS f
 JOIN producto AS p 
 ON p.codigo_fabricante = f.codigo;
@@ -222,15 +222,20 @@ ON p.codigo_fabricante = f.codigo
 WHERE f.nombre = "Hewlett-Packard");
 
 -- 40. Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
-SELECT *
-FROM producto AS p
-JOIN fabricante AS f 
-ON p.codigo_fabricante = f.codigo
-WHERE p.precio >= (SELECT MAX(p.precio) 
-FROM producto AS p 
-JOIN fabricante AS f 
-ON p.codigo_fabricante = f.codigo 
-WHERE f.nombre = "Lenovo");
+SELECT nombre
+FROM producto
+WHERE codigo_fabricante = (
+    SELECT codigo
+    FROM fabricante
+    WHERE nombre = 'Asus')
+AND precio > (
+    SELECT AVG(precio)
+    FROM producto
+    WHERE codigo_fabricante = (
+        SELECT codigo
+        FROM fabricante
+        WHERE nombre = 'Asus')
+);
 
 -- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
 SELECT p.nombre
