@@ -104,7 +104,7 @@ SELECT p.nombre, p.precio, f.nombre AS `nombre del fabricante`
 FROM producto AS p
 JOIN fabricante AS f 
 ON p.codigo_fabricante = f.codigo
-ORDER BY nombre;
+ORDER BY nombre COLLATE utf8mb4_spanish_ci;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
 SELECT p.codigo, p.nombre, f.codigo AS `codigo fabricante`, f.nombre AS `nombre fabricante` 
@@ -113,7 +113,7 @@ JOIN fabricante AS f
 ON p.codigo_fabricante = f.codigo;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
-SELECT DISTINCT p.nombre, p.precio, f.nombre AS fabricante 
+SELECT DISTINCT p.nombre, p.precio, f.nombre AS fabricant 
 FROM producto AS p
 JOIN fabricante AS f 
 ON p.codigo_fabricante = f.codigo
@@ -177,7 +177,7 @@ WHERE p.precio >= 180
 ORDER BY p.precio DESC, p.nombre ASC;
 
 -- 33. Retorna un llistat amb el codi i el nom de fabricant (fabricante), solament d'aquells fabricants que tenen productes associats en la base de dades.
-SELECT DISTINCT f.codigo, f.nombre AS fabricante
+SELECT DISTINCT f.codigo, f.nombre AS nombre
 FROM fabricante AS f
 JOIN producto AS p 
 ON p.codigo_fabricante = f.codigo;
@@ -196,7 +196,7 @@ ON p.codigo_fabricante = f.codigo
 WHERE p.nombre IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
-SELECT nombre
+SELECT codigo, nombre, preio, codigo_fabricante
 FROM producto
 WHERE codigo_fabricante = 2;
 
